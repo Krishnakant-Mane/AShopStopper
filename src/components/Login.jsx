@@ -1,15 +1,14 @@
 import React from 'react'
-import { useEffect } from 'react' 
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from "react";
 import { UserInfoContext } from "../context/UserInfoContext";
 
 
-
 export const Login = () => {
-
   const { userInfoDetails } = useContext(UserInfoContext);
+
+
   const navigate = useNavigate()
 
   const {
@@ -108,7 +107,7 @@ export const Login = () => {
           <div className="hidden md:flex w-full md:w-1/2 items-center justify-center bg-neutral-50">
             <img
               className="w-full h-full object-cover"
-              src="/images/logo.png"
+              src="https://i.pinimg.com/736x/79/e7/89/.jpg"
               alt="Login Illustration"
             />
           </div>
