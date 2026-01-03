@@ -108,7 +108,7 @@ export const Login = () => {
           <div className="hidden md:flex w-full md:w-1/2 items-center justify-center bg-neutral-50">
             <img
               className="w-full h-full object-cover"
-              src="https://i.pinimg.com/736x/79/e7/89/79e789cc6a306a77c3e85770cca26461.jpg"
+              src={logo}
               alt="Login Illustration"
             />
           </div>
