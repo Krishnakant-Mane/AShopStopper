@@ -7,9 +7,8 @@ import  logo  from "../assets/logo.png"
 
 
 export const Login = () => {
+  
   const { userInfoDetails } = useContext(UserInfoContext);
-
-
   const navigate = useNavigate()
 
   const {
