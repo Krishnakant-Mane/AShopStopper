@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import {useNavigate} from 'react-router-dom'
 
 export const Signup = () => {
 
+  const navigate = useNavigate()
+
+  const goToLogin = () =>{
+    navigate("/login")
+  }
   const {
 
     register,
@@ -98,6 +104,7 @@ export const Signup = () => {
               </div>
 
               <button
+                onClick={()=>goToLogin()}
                 type='submit'
                 className="
                 w-full bg-black text-white py-2 rounded-xl font-semibold 
@@ -109,9 +116,9 @@ export const Signup = () => {
 
               <p className="text-sm text-neutral-600 text-center">
                 Already have an account?
-                <a href="/login" className="text-black font-semibold hover:underline ml-1">
+                <Link to="/login" className="text-black font-semibold hover:underline ml-1">
                   Login
-                </a>
+                </Link>
               </p>
             </form>
           </div>
