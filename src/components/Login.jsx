@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from "react";
 import { UserInfoContext } from "../context/UserInfoContext";
-
+import { useEffect } from 'react';  
 
 export const Login = () => {
   const { userInfoDetails } = useContext(UserInfoContext);
@@ -107,7 +107,7 @@ export const Login = () => {
           <div className="hidden md:flex w-full md:w-1/2 items-center justify-center bg-neutral-50">
             <img
               className="w-full h-full object-cover"
-              src="https://i.pinimg.com/736x/79/e7/89/.jpg"
+              src="https://i.pinimg.com/736x/79/e7/89/79e789cc6a306a77c3e85770cca26461.jpg"
               alt="Login Illustration"
             />
           </div>
