@@ -18,22 +18,32 @@ export const Login = () => {
   } = useForm()
 
   const onSubmit = (data) => {
-    
+
     const storedData = JSON.parse(localStorage.getItem("user"));
 
-    if(!storedData){
+    if (!storedData) {
       alert("No account Found. Please signup first.");
       return;
     }
 
-    if(data.username === storedData.username && data.password === storedData.password){
-      userInfoDetails(storedData); 
+    if (data.username === storedData.username && data.password === storedData.password) {
+      userInfoDetails(storedData);
       console.log(userInfoDetails);
-      
+
       alert("Login successfull");
       navigate("/home");
     }
   };
+
+  useEffect(() => {
+    if (!localStorage.getItem("user")) {
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ username: "testuser", password: "Test@1234" })
+      );
+    }
+  }, []);
+
 
   return (
     <>
@@ -60,7 +70,7 @@ export const Login = () => {
                   type="text"
                   className="w-full mt-1 border border-neutral-400 rounded-lg px-3 py-2 focus:outline-none focus:border-black"
                   placeholder='Username'
-                  {...register("username", {required: "Enter Username"})}
+                  {...register("username", { required: "Enter Username" })}
                 />
                 {errors.username && <p className='text-red-700'>{errors.username.message}</p>}
               </div>
@@ -71,7 +81,7 @@ export const Login = () => {
                   type="password"
                   className="w-full mt-1 border border-neutral-400 rounded-lg px-3 py-2 focus:outline-none focus:border-black"
                   placeholder='Password'
-                  {...register("password",{pattern: {value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, message: "Enter Password"}})}
+                  {...register("password", { pattern: { value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, message: "Enter Password" } })}
                 />
                 {errors.password && <p className='text-red-700'>{errors.password.message}</p>}
               </div>
@@ -94,7 +104,6 @@ export const Login = () => {
             </form>
           </div>
 
-          {/* Right Image Section */}
           <div className="hidden md:flex w-full md:w-1/2 items-center justify-center bg-neutral-50">
             <img
               className="w-full h-full object-cover"
