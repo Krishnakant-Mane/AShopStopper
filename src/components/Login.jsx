@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from "react";
 import { UserInfoContext } from "../context/UserInfoContext";
-import { logo } from "../assets/logo.png"
+import  logo  from "../assets/logo.png"
 
 
 export const Login = () => {
