@@ -105,7 +105,13 @@ export const Login = () => {
             </form>
           </div>
 
-          
+          <div className="hidden md:flex w-full md:w-1/2 items-center justify-center bg-neutral-50">
+            <img
+              className="w-full h-full object-cover"
+              src="/images/logo.png"
+              alt="Login Illustration"
+            />
+          </div>
 
         </div>
 
