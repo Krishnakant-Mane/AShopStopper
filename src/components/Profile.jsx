@@ -76,7 +76,7 @@ export const Profile = () => {
             <button
               onClick={() => setOpen(!open)}
               className="px-6 py-2 bg-white text-yellow-500 border border-yellow-500 rounded-xl
-                     font-semibold hover:bg-yellow-500 hover:text-white transition hover:cursor-pointer"
+              font-semibold hover:bg-yellow-500 hover:text-white transition hover:cursor-pointer"
             >
               Update Profile
             </button>
@@ -112,10 +112,10 @@ export const Profile = () => {
                       placeholder="Username"
                       className="w-full mt-1 px-4 py-3 border border-neutral-300 rounded-xl
                   bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-black transition"
-                      {...register("username", { required: "username is Required" })}
+                      {...register("firstName", { required: "username is Required" })}
                     />
                     {errors.username && (
-                      <p className="text-sm text-red-600">{errors.username.message}</p>
+                      <p className="text-sm text-red-600">{errors.firstName.message}</p>
                     )}
                   </div>
 
