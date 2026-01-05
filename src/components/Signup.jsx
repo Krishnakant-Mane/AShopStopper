@@ -24,7 +24,24 @@ export const Signup = () => {
   const onSubmit = (data,e) => {
 
     console.log(data);
-    localStorage.setItem("user",JSON.stringify(data) || []);
+    localStorage.setItem("user",JSON.stringify(...data,[
+      {
+        firstName:"Admin",
+        lastName:"Admin",
+        phone:"7845123265",
+        role:"admin",
+        password:"Admin@1234",
+        cpassword:"Admin@1234"
+      },
+      {
+        firstName:"Customer",
+        lastName:"Customer",
+        phone:"7845123265",
+        role:"customer",
+        password:"Customer@1234",
+        cpassword:"Customer@1234"
+      }
+    ]));
     e.preventDefault()
     reset()
     toast.success("SignUp Successfull")
