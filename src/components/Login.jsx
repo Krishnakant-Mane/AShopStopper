@@ -26,7 +26,6 @@ export const Login = () => {
       return;
     }
     console.log("Running Login...");
-    
 
     if (data.username === storedData.username && data.password === storedData.password) {
       userInfoDetails(storedData);
@@ -35,6 +34,7 @@ export const Login = () => {
       alert("Login successfull");
       navigate("/home");
     }
+    console.log("Checking done...");
   };
 
 
