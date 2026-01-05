@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast';
-import {json, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import { Link } from "react-router-dom";
 
 
@@ -24,48 +24,7 @@ export const Signup = () => {
   const onSubmit = (data,e) => {
 
     console.log(data);
-    const existiongUsers = JSON.parse(localStorage.getItem("users")) || [];
-
-    const dummyUsers = [
-      {
-        firstName:"Admin",
-        lastName:"Admin",
-        phone:"7845123265",
-        role:"admin",
-        password:"Admin@1234",
-        cpassword:"Admin@1234"
-      },
-      {
-        firstName:"Customer",
-        lastName:"Customer",
-        phone:"7845123265",
-        role:"customer",
-        password:"Customer@1234",
-        cpassword:"Customer@1234"
-      }
-    ]
-    
-    const manyUsers = [...existiongUsers]
-    
-    dummyUsers.forEach(dummy => {
-      const exist = manyUsers.forEach(existing => {
-        existing.firstName == dummy.firstName && existing.password == dummy.password
-        if(!exist) manyUsers.push(dummy)
-      })
-    });
-
-    const userExist = manyUsers.some(exist =>
-      exist.firstName == data.firstName && exist.password == data.password
-    );
-
-    if(userExist){
-      toast.error("User exist. Please Login!")
-    }
-
-    manyUsers.push(data)
-
-    localStorage.setItem("user",JSON.stringify(manyUsers))
-
+    localStorage.setItem("user",JSON.stringify(data)) || [];
     e.preventDefault()
     reset()
     toast.success("SignUp Successfull")
