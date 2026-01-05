@@ -76,6 +76,9 @@ export const Orders = () => {
                     </div>
                 </div>
             ))}
+            <button onClick={window.print()} className="w-100 h-50 border rounded-2xl bg-black text-white hover:bg-white hover: text-black">
+                print Invoice
+            </button>
         </div>
     );
 };
