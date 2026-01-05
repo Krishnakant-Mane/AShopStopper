@@ -25,6 +25,8 @@ export const Login = () => {
       toast("No account Found. Please signup first.");
       return;
     }
+    console.log("Running Login...");
+    
 
     if (data.username === storedData.username && data.password === storedData.password) {
       userInfoDetails(storedData);
