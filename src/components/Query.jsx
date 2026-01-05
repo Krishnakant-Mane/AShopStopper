@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { UserInfoContext } from "../context/UserInfoContext";
 import { useNavigate } from 'react-router-dom'
 import { useContext } from "react";
+
 export const Query = () => {
     const { userInfo } = useContext(UserInfoContext);
     const navigate = useNavigate()
@@ -16,7 +17,7 @@ export const Query = () => {
     
 
     const [message, setMessage] = useState(
-        JSON.parse(localStorage.getItem('message'))
+        JSON.parse(localStorage.getItem('message') || [])
     )
 
     const whatsAppReply = (m) => {
@@ -45,13 +46,13 @@ export const Query = () => {
         window.open(emailUrl)
     }
 
-    if (message.length === 0) {
+    if (!message) {
             return (
                 <div className="h-screen flex flex-col items-center justify-center gap-4">
                     <h2 className="text-2xl font-semibold">No Query</h2>
                 </div>
             );
-        }
+    }
 
 
     return (
