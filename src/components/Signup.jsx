@@ -24,7 +24,7 @@ export const Signup = () => {
   const onSubmit = (data,e) => {
 
     console.log(data);
-    localStorage.setItem("user",JSON.stringify(data) || [
+    localStorage.setItem("user",JSON.stringify(data) && [
       {
         firstName:"Krishna",
         lastName:"Mane",
