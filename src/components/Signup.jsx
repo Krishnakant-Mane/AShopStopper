@@ -45,8 +45,26 @@ export const Signup = () => {
       }
     ]
     
-    const data = [...existiongUsers, ...dummyUsers]
-    localStorage.setItem("users",JSON.stringify(data));
+    const manyUsers = [...existiongUsers]
+    
+    dummyUsers.forEach(dummy => {
+      const exist = manyUsers.forEach(existing => {
+        existing.firstName == dummy.firstName && existing.password == dummy.password
+        if(!exist) manyUsers.push(dummy)
+      })
+    });
+
+    const userExist = manyUsers.some(exist =>
+      exist.firstName == data.firstName && exist.password == data.password
+    );
+
+    if(userExist){
+      toast.error("User exist. Please Login!")
+    }
+
+    manyUsers.push(data)
+
+    localStorage.setItem("user",JSON.stringify(manyUsers))
 
     e.preventDefault()
     reset()
