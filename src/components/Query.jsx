@@ -16,7 +16,7 @@ export const Query = () => {
     })
     
 
-    const [message, setMessage] = useState(
+    const [message] = useState(
         JSON.parse(localStorage.getItem('message') || [])
     )
 
