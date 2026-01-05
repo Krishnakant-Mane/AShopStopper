@@ -32,10 +32,6 @@ export const Signup = () => {
 
   };
 
-  const goToLogin = () =>{
-    navigate("/login")
-  }
-
   return (
     <>
       <div id='signup' className="flex items-center justify-center min-h-screen bg-neutral-100 px-4">
