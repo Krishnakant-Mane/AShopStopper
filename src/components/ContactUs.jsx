@@ -20,7 +20,7 @@ export const ContactUs = () => {
     
     const updatedMessage = [...existingMessage, data];
 
-    localStorage.setItem('message',JSON.stringify(updatedMessage));
+    localStorage.setItem('message',JSON.stringify(updatedMessage) || []);
     
     e.preventDefault()
 

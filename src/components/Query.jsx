@@ -46,7 +46,7 @@ export const Query = () => {
         window.open(emailUrl)
     }
 
-    if (message == null ) {
+    if (!message || message.length === 0 ) {
             return (
                 <div className="h-screen flex flex-col items-center justify-center gap-4">
                     <h2 className="text-2xl font-semibold">No Query</h2>
