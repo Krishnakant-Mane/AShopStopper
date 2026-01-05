@@ -26,9 +26,9 @@ export const Signup = () => {
     console.log(data);
     localStorage.setItem("user",JSON.stringify(data));
     e.preventDefault()
+    reset()
     toast.success("SignUp Successfull")
     navigate("/login")
-    reset()
 
   };
 
