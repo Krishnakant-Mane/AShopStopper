@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast';
-import {useNavigate} from 'react-router-dom'
+import {json, useNavigate} from 'react-router-dom'
 import { Link } from "react-router-dom";
 
 
@@ -24,7 +24,9 @@ export const Signup = () => {
   const onSubmit = (data,e) => {
 
     console.log(data);
-    localStorage.setItem("user",JSON.stringify(...data,[
+    const existiongUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+    const dummyUsers = [
       {
         firstName:"Admin",
         lastName:"Admin",
@@ -41,7 +43,11 @@ export const Signup = () => {
         password:"Customer@1234",
         cpassword:"Customer@1234"
       }
-    ]));
+    ]
+    
+    const data = [...existiongUsers, ...dummyUsers]
+    localStorage.setItem("users",JSON.stringify(data));
+
     e.preventDefault()
     reset()
     toast.success("SignUp Successfull")
