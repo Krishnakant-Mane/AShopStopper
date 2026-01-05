@@ -26,8 +26,8 @@ export const Login = () => {
     }else if (data.firstName === storedData.firstName && data.password === storedData.password) {
       userInfoDetails(storedData);
       console.log(userInfoDetails);
-
       toast.success("Login successfull");
+      navigate("/home")
     }else{
       toast.error("Invalid username or Password")
     }
