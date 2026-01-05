@@ -23,7 +23,7 @@ export const Login = () => {
 
     if (!storedData) {
       toast.error("No account Found. Please signup first.");
-    }else if (data.username === storedData.firstName && data.password === storedData.password) {
+    }else if (data.firstName === storedData.firstName && data.password === storedData.password) {
       userInfoDetails(storedData);
       console.log(userInfoDetails);
 
@@ -61,9 +61,9 @@ export const Login = () => {
                   type="text"
                   className="w-full mt-1 border border-neutral-400 rounded-lg px-3 py-2 focus:outline-none focus:border-black"
                   placeholder='Username'
-                  {...register("username", { required: "Enter Username" })}
+                  {...register("firstName", { required: "Enter Username" })}
                 />
-                {errors.username && <p className='text-red-700'>{errors.username.message}</p>}
+                {errors.firstName && <p className='text-red-700'>{errors.firstName.message}</p>}
               </div>
 
               <div>
