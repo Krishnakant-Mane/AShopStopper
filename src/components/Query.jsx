@@ -10,7 +10,6 @@ export const Query = () => {
     
         if(userInfo.u_role!='admin' )
         {
-            
             navigate("/home")
         }
     })
