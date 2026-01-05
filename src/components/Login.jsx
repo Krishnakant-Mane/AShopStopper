@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from "react";
 import { UserInfoContext } from "../context/UserInfoContext";
+import toast from 'daisyui/components/toast';
 
 export const Login = () => {
   const { userInfoDetails } = useContext(UserInfoContext);
@@ -21,7 +22,7 @@ export const Login = () => {
     const storedData = JSON.parse(localStorage.getItem("user"));
 
     if (!storedData) {
-      alert("No account Found. Please signup first.");
+      toast("No account Found. Please signup first.");
       return;
     }
 
