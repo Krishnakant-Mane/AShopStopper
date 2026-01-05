@@ -74,11 +74,11 @@ export const Orders = () => {
                     <div className="flex justify-end mt-4 text-xl font-semibold">
                         Total: ₹{order.total}
                     </div>
+                    <button onClick={window.print()} className="w-100 h-50 border rounded-2xl bg-black text-white hover:bg-white hover: text-black">
+                        print Invoice
+                    </button>
                 </div>
             ))}
-            <button onClick={window.print()} className="w-100 h-50 border rounded-2xl bg-black text-white hover:bg-white hover: text-black">
-                print Invoice
-            </button>
         </div>
     );
 };
