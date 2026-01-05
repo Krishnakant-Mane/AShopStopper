@@ -16,6 +16,9 @@ export const ContactUs = () => {
 
   const onSubmit = (data, e) =>{
 
+    localStorage.setItem('message',[]);
+
+
     const existingMessage = JSON.parse(localStorage.getItem('message')) || [];
     
     const updatedMessage = [...existingMessage, data];
