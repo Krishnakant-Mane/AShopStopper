@@ -16,7 +16,7 @@ export const Query = () => {
     
 
     const [message, setMessage] = useState(
-        JSON.parse(localStorage.getItem('message'))
+        JSON.parse(localStorage.getItem('message') || [])
     )
 
     const whatsAppReply = (m) => {
