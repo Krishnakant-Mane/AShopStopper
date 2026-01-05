@@ -22,7 +22,7 @@ export const Login = () => {
     const storedData = JSON.parse(localStorage.getItem("user"));
 
     if (!storedData) {
-      toast("No account Found. Please signup first.");
+      toast.error("No account Found. Please signup first.");
       return;
     }
     console.log("Running Login...");
@@ -31,7 +31,7 @@ export const Login = () => {
       userInfoDetails(storedData);
       console.log(userInfoDetails);
 
-      alert("Login successfull");
+      toast.success("Login successfull");
       navigate("/home");
     }
     console.log("Checking done...");
