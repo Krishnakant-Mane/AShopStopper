@@ -33,6 +33,8 @@ export const Login = () => {
 
       toast.success("Login successfull");
       navigate("/home");
+    }else{
+      toast.error("Invalid username or Password")
     }
     console.log("Checking done...");
   };
