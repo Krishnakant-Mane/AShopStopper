@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from "react";
 import { UserInfoContext } from "../context/UserInfoContext";
-import toast from 'daisyui/components/toast';
+import toast from 'react-hot-toast'
 
 export const Login = () => {
   const { userInfoDetails } = useContext(UserInfoContext);
