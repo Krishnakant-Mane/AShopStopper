@@ -8,9 +8,6 @@ export const Signup = () => {
 
   const navigate = useNavigate()
 
-  const goToLogin = () =>{
-    navigate("/login")
-  }
   const {
 
     register,
@@ -31,6 +28,10 @@ export const Signup = () => {
     reset()
 
   };
+
+  const goToLogin = () =>{
+    navigate("/login")
+  }
 
   return (
     <>
@@ -106,7 +107,6 @@ export const Signup = () => {
               </div>
 
               <button
-                onClick={()=>goToLogin()}
                 type='submit'
                 className="
                 w-full bg-black text-white py-2 rounded-xl font-semibold 
