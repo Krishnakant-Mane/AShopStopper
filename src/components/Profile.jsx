@@ -83,7 +83,7 @@ export const Profile = () => {
 
             <h6 className="flex gap-2 text-sm md:text-base">
               Role <p>{profile.role}</p>
-            </h6>
+            </h6> 
           </div>
 
           {/* RIGHT CONTENT */}
@@ -227,7 +227,7 @@ export const Profile = () => {
                       Name
                     </p>
                     <p className="text-2xl md:text-4xl font-semibold text-neutral-900">
-                      {profile.username}
+                      {profile.firstName}
                     </p>
                   </div>
 
