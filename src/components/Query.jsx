@@ -8,7 +8,7 @@ export const Query = () => {
     
     useEffect(() => {
     
-        if(userInfo.u_role!='admin')
+        if(userInfo.u_role!='admin' )
         {
             
             navigate("/home")
@@ -19,8 +19,6 @@ export const Query = () => {
     const [message, setMessage] = useState(
         JSON.parse(localStorage.getItem('message'))
     )
-
-    const [approve, setApprove] = useState(false)
 
     const whatsAppReply = (m) => {
         const phoneNumber = `${m.phone}`

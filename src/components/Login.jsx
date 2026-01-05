@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from "react";
 import { UserInfoContext } from "../context/UserInfoContext";
-import { useEffect } from 'react';  
 
 export const Login = () => {
   const { userInfoDetails } = useContext(UserInfoContext);
@@ -34,15 +33,6 @@ export const Login = () => {
       navigate("/home");
     }
   };
-
-  useEffect(() => {
-    if (!localStorage.getItem("user")) {
-      localStorage.setItem(
-        "user",
-        JSON.stringify({ username: "testuser", password: "Test@1234" })
-      );
-    }
-  }, []);
 
 
   return (

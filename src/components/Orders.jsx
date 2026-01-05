@@ -8,13 +8,13 @@ export const Orders = () => {
     const { userInfo } = useContext(UserInfoContext);
     const navigate = useNavigate()
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        if (userInfo.u_role != 'admin' || userInfo.u_role != 'customer') {
+    //     if (userInfo.u_role != 'admin' || userInfo.u_role != 'customer') {
 
-            navigate("/home")
-        }
-    })
+    //         navigate("/home")
+    //     }
+    // })
 
     const [orders, setOrders] = useState([]);
 
