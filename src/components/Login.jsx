@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from "react";
 import { UserInfoContext } from "../context/UserInfoContext";
 import toast from 'react-hot-toast'
@@ -90,9 +90,9 @@ export const Login = () => {
 
               <p className="text-sm text-neutral-600 text-center">
                 Don’t have an account?
-                <a href="/signup" className="text-black font-semibold hover:underline ml-1">
+                <Link to="/signup" className="text-black font-semibold hover:underline ml-1">
                   Signup
-                </a>
+                </Link>
               </p>
             </form>
           </div>
