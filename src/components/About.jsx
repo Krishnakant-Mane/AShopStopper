@@ -49,14 +49,13 @@ export const About = () => {
   return (
     <>
       <div className="w-full">
-        {/* TITLE */}
+
         <div className="w-full my-5 px-4 sm:px-5">
           <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl border-b-2">
             ASHOPSTOPPER
           </h1>
         </div>
 
-        {/* INTRO */}
         <div className="w-full my-5 px-4 sm:p-10 md:p-20">
           <div className="flex w-full justify-end">
             <div className="w-full md:w-1/2">
@@ -67,7 +66,6 @@ export const About = () => {
           </div>
         </div>
 
-        {/* INSIDE ASHOPSTOPPER */}
         <div className="flex flex-col md:flex-row w-full my-5 px-4 md:p-20 gap-10 md:justify-between">
           <div className="w-full md:w-1/3 text-3xl md:text-5xl">
             INSIDE ASHOPSTOPPER
@@ -94,14 +92,12 @@ export const About = () => {
           </div>
         </div>
 
-        {/* MOVING TEXT */}
         <div className="my-5 relative flex w-full overflow-x-hidden overflow-y-hidden justify-center items-center">
           <div id="text" className="flex w-full text-4xl sm:text-6xl md:text-8xl lg:text-9xl italic whitespace-nowrap">
             DESIGN • CRAFTMANSHIP
           </div>
         </div>
 
-        {/* FASHION SECTION */}
         <div className="w-full px-4 md:px-20">
           <div className="flex flex-col md:flex-row w-full gap-10">
             <div className="w-full md:w-1/2 text-3xl md:text-5xl italic">
@@ -115,7 +111,6 @@ export const About = () => {
             </div>
           </div>
 
-          {/* IMAGE + ACCORDION */}
           <div className="flex flex-col md:flex-row w-full gap-10 mt-10">
             <div className="w-full md:w-1/2">
               <img
@@ -153,7 +148,6 @@ export const About = () => {
             </div>
           </div>
 
-          {/* TEXT BLOCKS */}
           <div className="flex flex-col md:flex-row w-full my-10 gap-10">
             <div className="w-full md:w-1/2 text-2xl md:text-5xl">
               DEVELOPERS BEHIND THE VISION

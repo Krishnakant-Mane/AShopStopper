@@ -30,7 +30,6 @@ export const ContactUs = () => {
     <>
       <div className="flex flex-col lg:flex-row w-full min-h-screen border border-black rounded-2xl">
 
-        {/* Image */}
         <div className="flex border w-full lg:w-[40%] rounded-2xl overflow-hidden">
           <img
             className="w-full h-full object-cover"
@@ -39,22 +38,18 @@ export const ContactUs = () => {
           />
         </div>
 
-        {/* Content */}
         <div className="p-4 sm:p-10 lg:p-30 w-full border rounded-2xl">
           <div className="border rounded-2xl">
 
-            {/* Title */}
             <div>
               <p className="flex m-1 justify-center items-center text-3xl sm:text-5xl lg:text-7xl font-bold">
                 Contact Us
               </p>
             </div>
 
-            {/* Form */}
             <div className="p-5">
               <form onSubmit={handleSubmit(onSubmit)}>
 
-                {/* First + Last Name */}
                 <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
                   <div className="flex flex-col w-full md:w-1/2">
                     <label className="text-sm font-medium text-neutral-700">First Name:</label>
@@ -79,7 +74,6 @@ export const ContactUs = () => {
                   </div>
                 </div>
 
-                {/* Email + Phone */}
                 <div className="flex flex-col md:flex-row gap-4 justify-between items-center mt-4">
                   <div className="flex flex-col w-full md:w-1/2">
                     <label className="text-sm font-medium text-neutral-700">Email</label>
@@ -116,7 +110,6 @@ export const ContactUs = () => {
                   </div>
                 </div>
 
-                {/* Message */}
                 <div className="mt-4">
                   <label className="text-sm font-medium text-neutral-700">Message</label>
                   <textarea
@@ -125,8 +118,6 @@ export const ContactUs = () => {
                     {...register("message", { required: "Enter Message" })}
                   />
                 </div>
-
-                {/* Button */}
                 <div className="flex justify-center items-center w-full mt-6">
                   <button
                     type="submit"
