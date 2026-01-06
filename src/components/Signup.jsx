@@ -23,8 +23,13 @@ export const Signup = () => {
 
   const onSubmit = (data,e) => {
 
+    const user = {
+      ...data,
+      "role":"customer"
+    }
+
     console.log(data);
-    localStorage.setItem("user",JSON.stringify(data)) || [];
+    localStorage.setItem("user",JSON.stringify(user)) || [];
     e.preventDefault()
     reset()
     toast.success("SignUp Successfull")
