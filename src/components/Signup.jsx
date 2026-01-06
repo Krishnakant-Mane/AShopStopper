@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast';
 import {useNavigate} from 'react-router-dom'
@@ -36,6 +36,18 @@ export const Signup = () => {
     navigate("/login")
 
   };
+
+  useEffect(()=>{
+    localStorage.setItem('users',JSON.stringify(
+      {
+        "firstName":"Admin",
+        "lastName":"Admin",
+        "role":"admin",
+        "password":"Admin@123",
+        "cpassword":"Admin@123"
+      }
+    ))
+  },[])
 
   return (
     <>
