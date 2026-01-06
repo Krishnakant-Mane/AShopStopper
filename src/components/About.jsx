@@ -9,32 +9,32 @@ export const About = () => {
   };
 
   const items = [
-  {
-    title: "What payment methods are accepted?",
-    content:
-      "We accept UPI, debit cards, credit cards, net banking, and popular digital wallets."
-  },
-  {
-    title: "How long does delivery take?",
-    content:
-      "Orders are usually delivered within 3–7 business days depending on your location."
-  },
-  {
-    title: "Can I return a product?",
-    content:
-      "Yes, products can be returned within 7 days of delivery if they meet our return policy conditions."
-  },
-  {
-    title: "Do you offer cash on delivery?",
-    content:
-      "Cash on Delivery is available in selected locations and depends on the product category."
-  },
-  {
-    title: "How do I track my order?",
-    content:
-      "Once your order is shipped, you’ll receive a tracking link via email and SMS."
-  }
-];
+    {
+      title: "What payment methods are accepted?",
+      content:
+        "We accept UPI, debit cards, credit cards, net banking, and popular digital wallets."
+    },
+    {
+      title: "How long does delivery take?",
+      content:
+        "Orders are usually delivered within 3–7 business days depending on your location."
+    },
+    {
+      title: "Can I return a product?",
+      content:
+        "Yes, products can be returned within 7 days of delivery if they meet our return policy conditions."
+    },
+    {
+      title: "Do you offer cash on delivery?",
+      content:
+        "Cash on Delivery is available in selected locations and depends on the product category."
+    },
+    {
+      title: "How do I track my order?",
+      content:
+        "Once your order is shipped, you’ll receive a tracking link via email and SMS."
+    }
+  ];
 
 
   useGSAP(() => {
@@ -48,78 +48,89 @@ export const About = () => {
 
   return (
     <>
-      <div className='w-full'>
-        <div className='w-full my-5 px-5'>
-          <h1 className='text-9xl border-b-2'>ASHOPSTOPPER</h1>
+      <div className="w-full">
+        {/* TITLE */}
+        <div className="w-full my-5 px-4 sm:px-5">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl border-b-2">
+            ASHOPSTOPPER
+          </h1>
         </div>
 
-        <div className='w-full my-5 p-20'>
-          <div className='flex w-full justify-end'>
-            <div className='w-1/2'>
-              <p className='text-5xl'>
+        {/* INTRO */}
+        <div className="w-full my-5 px-4 sm:p-10 md:p-20">
+          <div className="flex w-full justify-end">
+            <div className="w-full md:w-1/2">
+              <p className="text-xl sm:text-3xl md:text-5xl">
                 Discover a refined way of living with <b>Ashopstopper</b>. Rooted in thoughtful design and modern aesthetics, our collections celebrate crafted simplicity and timeless style.
               </p>
             </div>
           </div>
         </div>
 
-        <div className='flex w-full my-5 p-20 justify-between'>
-          <div className='w-1/3 text-5xl'>INSIDE ASHOPSTOPPER</div>
+        {/* INSIDE ASHOPSTOPPER */}
+        <div className="flex flex-col md:flex-row w-full my-5 px-4 md:p-20 gap-10 md:justify-between">
+          <div className="w-full md:w-1/3 text-3xl md:text-5xl">
+            INSIDE ASHOPSTOPPER
+          </div>
 
-          <div className='w-1/2'>
-            <div className='border-t-2 p-5 flex gap-10'>
+          <div className="w-full md:w-1/2">
+            <div className="border-t-2 p-5 flex flex-col sm:flex-row gap-5 sm:gap-10">
               <div>01</div>
-              <div className='text-3xl font-bold'>Our Vision</div>
+              <div className="text-xl sm:text-3xl font-bold">Our Vision</div>
               <div>
                 We see design as more than aesthetics—it’s a way of living with intention,
                 comfort, and connection.
               </div>
             </div>
 
-            <div className='border-t-2 p-5 flex gap-10'>
+            <div className="border-t-2 p-5 flex flex-col sm:flex-row gap-5 sm:gap-10">
               <div>02</div>
-              <div className='text-3xl font-bold'>Our Mission</div>
+              <div className="text-xl sm:text-3xl font-bold">Our Mission</div>
               <div>
                 Our mission is to craft thoughtfully designed furniture that blends
                 Italian precision with human-centered values.
               </div>
             </div>
-
           </div>
         </div>
 
-        <div className=' my-5 relative flex w-full overflow-x-hidden overflow-y-hidden justify-center items-center ' >
-          <div id='text' className=' flex w-full text-9xl italic whitespace-nowrap'>
+        {/* MOVING TEXT */}
+        <div className="my-5 relative flex w-full overflow-x-hidden overflow-y-hidden justify-center items-center">
+          <div id="text" className="flex w-full text-4xl sm:text-6xl md:text-8xl lg:text-9xl italic whitespace-nowrap">
             DESIGN • CRAFTMANSHIP
           </div>
         </div>
 
-        <div className=' w-full px-20'>
-          <div className='flex w-full'>
-
-            <div className='w-1/2 text-5xl italic'>
+        {/* FASHION SECTION */}
+        <div className="w-full px-4 md:px-20">
+          <div className="flex flex-col md:flex-row w-full gap-10">
+            <div className="w-full md:w-1/2 text-3xl md:text-5xl italic">
               FASHION&MORE
             </div>
-            <div className='w-1/2'>
-              <div className='w-1/2'>
+
+            <div className="w-full md:w-1/2">
+              <div className="max-w-md">
                 Rooted in Italian craftsmanship, our values lie in thoughtful design that connects people to spaces-creating harmony. comfort, and a quiet sense of belonging.
               </div>
             </div>
           </div>
 
-          <div className='flex w-full'>
-            <div className='w-1/2'>
-              <div className='w-100 h-150'>
-                <img src="https://i.pinimg.com/736x/99/e2/00/99e2004f0a0f2710aa16ad0033fc2bf7.jpg" alt="" />
-              </div>
+          {/* IMAGE + ACCORDION */}
+          <div className="flex flex-col md:flex-row w-full gap-10 mt-10">
+            <div className="w-full md:w-1/2">
+              <img
+                className="w-full h-auto object-cover rounded-xl"
+                src="https://i.pinimg.com/736x/99/e2/00/99e2004f0a0f2710aa16ad0033fc2bf7.jpg"
+                alt=""
+              />
             </div>
-            <div className="w-1/2 pt-5 space-y-2">
+
+            <div className="w-full md:w-1/2 pt-5 space-y-2">
               {items.map((item, index) => {
                 const isOpen = openIndex === index;
 
                 return (
                   <div key={index} className="py-2 border-t-2">
-                    {/* Header */}
                     <button
                       onClick={() => toggleAccordion(index)}
                       className="flex justify-between items-center w-full px-4 py-2 font-medium"
@@ -128,11 +139,9 @@ export const About = () => {
                       <span className="text-xl">{isOpen ? "−" : "+"}</span>
                     </button>
 
-                    {/* Content */}
                     <div
                       className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600
-              ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}
-              `}
+                  ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
                     >
                       <div className="overflow-hidden px-4 pb-2">
                         {item.content}
@@ -144,42 +153,27 @@ export const About = () => {
             </div>
           </div>
 
-          <div className='flex w-full'>
-            <div className='w-1/2'></div>
-            <div className='w-1/2'>
-              <div className='w-1/2'>
-                Inspired by Italian artistry, we believe in design that fosters connection, bringing harmony, comfort, and a feeling of home to every space.
-              </div>
+          {/* TEXT BLOCKS */}
+          <div className="flex flex-col md:flex-row w-full my-10 gap-10">
+            <div className="w-full md:w-1/2 text-2xl md:text-5xl">
+              DEVELOPERS BEHIND THE VISION
+            </div>
+
+            <div className="w-full md:w-1/2 text-lg md:text-2xl">
+              Each member of our team brings a unique perspective, bound by a shared passion for thoughtful design and timeless quality. Together, we shape spaces that feel personal, purposeful, and beautifully made.
             </div>
           </div>
 
-          <div className='flex w-full my-5'>
-            <div className='w-1/2 text-5xl'>
-              <div className='w-125'>
-                <p>DEVELOPERS BEHIND THE VISION</p>
-              </div>
-            </div>
-            <div className='w-1/2'>
-              <div className='w-200 text-2xl'>
-                <p>
-                  Each member of our team brings a unique perspective, Dound by a shared passion for thoughtful design and timeless quality. Together, we shape spaces that feel personal, purposeful, and beautifully made.
-                </p>
-              </div>
+          <div className="flex flex-col md:flex-row w-full my-5">
+            <div className="w-full md:w-1/2"></div>
+            <div className="w-full md:w-1/2 max-w-md">
+              Founded in Italy, Lapalma grew from the belief that true beauty lies in simplicity—shaped with precision and purpose. Every design reflects a commitment to essential forms.
             </div>
           </div>
-
-          <div className='flex w-full my-5'>
-            <div className='w-1/2'></div>
-            <div className='w-1/2'>
-              <div className='w-1/2'>
-                Founded in Italy, Lapalma grew from the belief that rue beauty lies in simplicity-shaped with precision and purpose. Every design reflects a commitment o essential forms.
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </>
+
   )
 }
 
