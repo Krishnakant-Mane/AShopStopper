@@ -56,14 +56,14 @@ export const Cart = () => {
                     {/* CART SECTION */}
                     <div className="flex-1">
 
-                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-base-content">
                             Cart ({totalItem} items)
                         </h1>
 
                         {cartDetails.map(item => (
                             <div
                                 key={item.productID}
-                                className="flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-black rounded-2xl p-4 sm:p-6 mb-5"
+                                className="flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-neutral-300 dark:border-neutral-700 rounded-2xl p-4 sm:p-6 mb-5 bg-base-100 transition-colors"
                             >
                                 {/* Image */}
                                 <img
@@ -73,10 +73,10 @@ export const Cart = () => {
                                 />
 
                                 <div className="flex-1 text-center sm:text-left">
-                                    <h2 className="text-lg sm:text-xl font-semibold">
+                                    <h2 className="text-lg sm:text-xl font-semibold text-base-content">
                                         {item.productName}
                                     </h2>
-                                    <p className="text-base sm:text-lg font-bold mt-1">
+                                    <p className="text-base sm:text-lg font-bold mt-1 text-base-content/80">
                                         ₹{item.productPrice}
                                     </p>
                                 </div>
@@ -84,7 +84,7 @@ export const Cart = () => {
                                 <div className="flex items-center gap-3">
                                     <button
                                         onClick={() => decreaseQty(item.productID)}
-                                        className="px-3 py-1 border border-black rounded-lg font-bold hover:bg-black hover:text-white transition"
+                                        className="px-3 py-1 border border-neutral-300 dark:border-neutral-700 rounded-lg font-bold hover:bg-primary hover:text-primary-content transition"
                                     >
                                         −
                                     </button>
@@ -95,7 +95,7 @@ export const Cart = () => {
 
                                     <button
                                         onClick={() => increasedQty(item.productID)}
-                                        className="px-3 py-1 border border-black rounded-lg font-bold hover:bg-black hover:text-white transition"
+                                        className="px-3 py-1 border border-neutral-300 dark:border-neutral-700 rounded-lg font-bold hover:bg-primary hover:text-primary-content transition"
                                     >
                                         +
                                     </button>
@@ -110,21 +110,21 @@ export const Cart = () => {
                             </div>
                         ))}
 
-                        <div className="mt-8 border-t border-black pt-6 text-right">
-                            <h2 className="text-2xl sm:text-3xl font-bold">
+                        <div className="mt-8 border-t border-neutral-300 dark:border-neutral-700 pt-6 text-right">
+                            <h2 className="text-2xl sm:text-3xl font-bold text-base-content">
                                 Total: ₹{totalPrice}
                             </h2>
                         </div>
                     </div>
 
                     <div className="w-full lg:w-[420px]">
-                        <div className="border border-black rounded-2xl p-4 flex flex-col sticky top-6">
+                        <div className="border border-neutral-300 dark:border-neutral-700 rounded-2xl p-4 flex flex-col sticky top-6 bg-base-100">
 
-                            <div className="flex justify-center items-center h-[60px] border-b border-black">
-                                <h1 className="text-2xl font-semibold">Order Summary</h1>
+                            <div className="flex justify-center items-center h-[60px] border-b border-neutral-300 dark:border-neutral-700">
+                                <h1 className="text-2xl font-semibold text-base-content">Order Summary</h1>
                             </div>
 
-                            <div className="flex justify-between items-center h-[45px] px-3 border-b border-black font-medium">
+                            <div className="flex justify-between items-center h-[45px] px-3 border-b border-neutral-300 dark:border-neutral-700 font-medium text-base-content/70">
                                 <div className="w-1/3">Product</div>
                                 <div className="w-1/3 text-center">Qty</div>
                                 <div className="w-1/3 text-right">Price</div>
@@ -143,15 +143,15 @@ export const Cart = () => {
                                 ))}
                             </div>
 
-                            <div className="flex justify-between items-center h-[60px] px-3 border-t border-black">
-                                <div className="text-xl font-semibold">Total</div>
-                                <div className="text-xl font-semibold">{totalPrice}</div>
+                            <div className="flex justify-between items-center h-[60px] px-3 border-t border-neutral-300 dark:border-neutral-700">
+                                <div className="text-xl font-semibold text-base-content">Total</div>
+                                <div className="text-xl font-semibold text-base-content">{totalPrice}</div>
                             </div>
 
                             <div className="flex justify-center items-center h-[60px]">
                                 <button
                                     onClick={() => orderCount(cartDetails, totalPrice)}
-                                    className="w-full h-10 border border-black rounded-xl hover:bg-black hover:text-white transition"
+                                    className="w-full h-10 border border-primary text-primary rounded-xl hover:bg-primary hover:text-primary-content transition"
                                 >
                                     Order
                                 </button>

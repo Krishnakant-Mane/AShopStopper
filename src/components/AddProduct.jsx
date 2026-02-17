@@ -27,27 +27,27 @@ export const AddProduct = () => {
             //         image: data.image
             //     }
 
-                
+
             // );
 
             const localProducts = JSON.parse(localStorage.getItem("products")) || [];
 
-                const newProduct = {
-                    id: data.id,
-                    title: data.title,
-                    price: data.price,
-                    description: data.description,
-                    image: data.image,
-                    category: data.category
-                };
+            const newProduct = {
+                id: data.id,
+                title: data.title,
+                price: data.price,
+                description: data.description,
+                image: data.image,
+                category: data.category
+            };
 
-                localProducts.push(newProduct);
-                localStorage.setItem("products",JSON.stringify(localProducts));
-                
-                alert("Product Added")
-                reset();
-                console.log(localProducts);
-                
+            localProducts.push(newProduct);
+            localStorage.setItem("products", JSON.stringify(localProducts));
+
+            alert("Product Added")
+            reset();
+            console.log(localProducts);
+
 
         } catch (error) {
             alert("Failed to Add Product");
@@ -60,9 +60,9 @@ export const AddProduct = () => {
             <div className="min-h-screen flex justify-center items-center">
                 <form
                     onSubmit={handleSubmit(onSubmit)}
-                    className="bg-white p-8 rounded-2xl shadow-xl w-96 space-y-4"
+                    className="bg-base-100 p-8 rounded-2xl shadow-xl w-96 space-y-4 border border-neutral-300 dark:border-neutral-700"
                 >
-                    <h2 className="text-2xl font-bold text-center">Add Product</h2>
+                    <h2 className="text-2xl font-bold text-center text-base-content">Add Product</h2>
 
                     <input
                         type="number"
@@ -103,7 +103,7 @@ export const AddProduct = () => {
                         className="textarea textarea-bordered w-full"
                     />
 
-                    <button className="btn bg-black text-white w-full rounded-2xl">
+                    <button className="btn btn-primary w-full rounded-2xl">
                         Add Product
                     </button>
                 </form>

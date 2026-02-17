@@ -28,7 +28,7 @@ export const ContactUs = () => {
   }
   return (
     <>
-      <div className="flex flex-col lg:flex-row w-full min-h-screen border border-black rounded-2xl">
+      <div className="flex flex-col lg:flex-row w-full min-h-screen border border-neutral-300 dark:border-neutral-700 rounded-2xl bg-base-100 transition-colors">
 
         <div className="flex border w-full lg:w-[40%] rounded-2xl overflow-hidden">
           <img
@@ -38,11 +38,11 @@ export const ContactUs = () => {
           />
         </div>
 
-        <div className="p-4 sm:p-10 lg:p-30 w-full border rounded-2xl">
+        <div className="p-4 sm:p-10 lg:p-30 w-full border border-neutral-300 dark:border-neutral-700 rounded-2xl bg-base-100">
           <div className="border rounded-2xl">
 
             <div>
-              <p className="flex m-1 justify-center items-center text-3xl sm:text-5xl lg:text-7xl font-bold">
+              <p className="flex m-1 justify-center items-center text-3xl sm:text-5xl lg:text-7xl font-bold text-base-content">
                 Contact Us
               </p>
             </div>
@@ -52,22 +52,22 @@ export const ContactUs = () => {
 
                 <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
                   <div className="flex flex-col w-full md:w-1/2">
-                    <label className="text-sm font-medium text-neutral-700">First Name:</label>
+                    <label className="text-sm font-medium text-base-content/80">First Name:</label>
                     <input
                       type="text"
                       placeholder="First Name"
-                      className="w-full mt-1 border border-neutral-400 rounded-lg px-3 py-2 focus:outline-none focus:border-black"
+                      className="w-full mt-1 border border-neutral-400 dark:border-neutral-600 bg-base-100 text-base-content rounded-lg px-3 py-2 focus:outline-none focus:border-primary"
                       {...register("firstName", { required: "Enter require field" })}
                     />
                     {errors.firstName && <p className="text-red-700">{errors.firstName.message}</p>}
                   </div>
 
                   <div className="flex flex-col w-full md:w-1/2">
-                    <label className="text-sm font-medium text-neutral-700">Last Name:</label>
+                    <label className="text-sm font-medium text-base-content/80">Last Name:</label>
                     <input
                       type="text"
                       placeholder="Last Name"
-                      className="w-full mt-1 border border-neutral-400 rounded-lg px-3 py-2 focus:outline-none focus:border-black"
+                      className="w-full mt-1 border border-neutral-400 dark:border-neutral-600 bg-base-100 text-base-content rounded-lg px-3 py-2 focus:outline-none focus:border-primary"
                       {...register("lastName", { required: "Enter require field" })}
                     />
                     {errors.lastName && <p className="text-red-700">{errors.lastName.message}</p>}
@@ -76,11 +76,11 @@ export const ContactUs = () => {
 
                 <div className="flex flex-col md:flex-row gap-4 justify-between items-center mt-4">
                   <div className="flex flex-col w-full md:w-1/2">
-                    <label className="text-sm font-medium text-neutral-700">Email</label>
+                    <label className="text-sm font-medium text-base-content/80">Email</label>
                     <input
                       type="email"
                       placeholder="Email"
-                      className="w-full mt-1 border border-neutral-400 rounded-lg px-3 py-2 focus:outline-none focus:border-black"
+                      className="w-full mt-1 border border-neutral-400 dark:border-neutral-600 bg-base-100 text-base-content rounded-lg px-3 py-2 focus:outline-none focus:border-primary"
                       {...register("email", {
                         required: "Enter require field",
                         pattern: {
@@ -93,11 +93,11 @@ export const ContactUs = () => {
                   </div>
 
                   <div className="flex flex-col w-full md:w-1/2">
-                    <label className="text-sm font-medium text-neutral-700">Phone No</label>
+                    <label className="text-sm font-medium text-base-content/80">Phone No</label>
                     <input
                       type="tel"
                       placeholder="Phone No"
-                      className="w-full mt-1 border border-neutral-400 rounded-lg px-3 py-2 focus:outline-none focus:border-black"
+                      className="w-full mt-1 border border-neutral-400 dark:border-neutral-600 bg-base-100 text-base-content rounded-lg px-3 py-2 focus:outline-none focus:border-primary"
                       {...register("phone", {
                         required: "Enter require field",
                         pattern: {
@@ -111,9 +111,9 @@ export const ContactUs = () => {
                 </div>
 
                 <div className="mt-4">
-                  <label className="text-sm font-medium text-neutral-700">Message</label>
+                  <label className="text-sm font-medium text-base-content/80">Message</label>
                   <textarea
-                    className="w-full h-32 sm:h-40 border border-neutral-400 rounded-lg px-3 py-2 focus:outline-none focus:border-black"
+                    className="w-full h-32 sm:h-40 border border-neutral-400 dark:border-neutral-600 bg-base-100 text-base-content rounded-lg px-3 py-2 focus:outline-none focus:border-primary"
                     placeholder="Message"
                     {...register("message", { required: "Enter Message" })}
                   />
@@ -121,7 +121,7 @@ export const ContactUs = () => {
                 <div className="flex justify-center items-center w-full mt-6">
                   <button
                     type="submit"
-                    className="w-full sm:w-1/2 bg-black text-white py-2 rounded-xl font-semibold hover:bg-neutral-900 transition"
+                    className="w-full sm:w-1/2 bg-primary text-primary-content py-2 rounded-xl font-semibold hover:opacity-90 transition"
                   >
                     Submit
                   </button>

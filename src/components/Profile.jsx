@@ -45,8 +45,8 @@ export const Profile = () => {
 
   return (
     <>
-      <div className="flex w-full min-h-screen bg-neutral-100 p-4 md:p-8 lg:p-16">
-        <div className="flex flex-col lg:flex-row w-full bg-white rounded-3xl shadow-xl overflow-hidden">
+      <div className="flex w-full min-h-screen bg-base-200 p-4 md:p-8 lg:p-16 transition-colors">
+        <div className="flex flex-col lg:flex-row w-full bg-base-100 border border-neutral-300 dark:border-neutral-700 rounded-3xl shadow-xl overflow-hidden transition-colors">
 
           {/* LEFT PROFILE */}
           <div className="
@@ -57,7 +57,7 @@ export const Profile = () => {
         items-center
         justify-center
         gap-6
-        bg-neutral-50
+        bg-base-200/50
         p-6 md:p-10
       ">
 
@@ -69,25 +69,25 @@ export const Profile = () => {
               />
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-base-content text-center">
               {profile.firstName}
             </h1>
 
             <button
               onClick={() => setOpen(!open)}
-              className="px-6 py-2 bg-white text-yellow-500 border border-yellow-500 rounded-xl
-              font-semibold hover:bg-yellow-500 hover:text-white transition hover:cursor-pointer"
+              className="px-6 py-2 bg-primary text-primary-content border border-primary rounded-xl
+              font-semibold hover:opacity-90 transition hover:cursor-pointer"
             >
               Update Profile
             </button>
 
             <h6 className="flex gap-2 text-sm md:text-base">
               Role <p>{profile.role}</p>
-            </h6> 
+            </h6>
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="flex flex-col flex-1 p-6 md:p-10 lg:p-12 bg-white">
+          <div className="flex flex-col flex-1 p-6 md:p-10 lg:p-12 bg-base-100">
 
             {open ? (
               /* UPDATE FORM */
@@ -104,14 +104,14 @@ export const Profile = () => {
 
                   {/* Username */}
                   <div>
-                    <label className="text-sm font-medium text-neutral-600">
+                    <label className="text-sm font-medium text-base-content/70">
                       Username
                     </label>
                     <input
                       type="text"
                       placeholder="Username"
-                      className="w-full mt-1 px-4 py-3 border border-neutral-300 rounded-xl
-                  bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-black transition"
+                      className="w-full mt-1 px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-xl
+                  bg-base-200 text-base-content focus:outline-none focus:ring-2 focus:ring-primary transition"
                       {...register("firstName", { required: "username is Required" })}
                     />
                     {errors.username && (
@@ -121,14 +121,14 @@ export const Profile = () => {
 
                   {/* Phone */}
                   <div>
-                    <label className="text-sm font-medium text-neutral-600">
+                    <label className="text-sm font-medium text-base-content/70">
                       Phone No.
                     </label>
                     <input
                       type="tel"
                       placeholder="Phone No"
-                      className="w-full mt-1 px-4 py-3 border border-neutral-300 rounded-xl
-                             bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-black transition"
+                      className="w-full mt-1 px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-xl
+                             bg-base-200 text-base-content focus:outline-none focus:ring-2 focus:ring-primary transition"
                       {...register("phone", {
                         required: "Must enter Phone No",
                         pattern: {
@@ -144,14 +144,14 @@ export const Profile = () => {
 
                   {/* Password */}
                   <div>
-                    <label className="text-sm font-medium text-neutral-600">
+                    <label className="text-sm font-medium text-base-content/70">
                       Password
                     </label>
                     <input
                       type="password"
                       placeholder="Password"
-                      className="w-full mt-1 px-4 py-3 border border-neutral-300 rounded-xl
-                             bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-black transition"
+                      className="w-full mt-1 px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-xl
+                             bg-base-200 text-base-content focus:outline-none focus:ring-2 focus:ring-primary transition"
                       {...register("password", {
                         required: "Must enter Password",
                         pattern: {
@@ -169,14 +169,14 @@ export const Profile = () => {
 
                   {/* Confirm Password */}
                   <div>
-                    <label className="text-sm font-medium text-neutral-600">
+                    <label className="text-sm font-medium text-base-content/70">
                       Confirm Password
                     </label>
                     <input
                       type="password"
                       placeholder="Confirm Password"
-                      className="w-full mt-1 px-4 py-3 border border-neutral-300 rounded-xl
-                             bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-black transition"
+                      className="w-full mt-1 px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-xl
+                             bg-base-200 text-base-content focus:outline-none focus:ring-2 focus:ring-primary transition"
                       {...register("cpassword", {
                         required: "Must enter same Password",
                         validate: (value) =>
@@ -190,14 +190,14 @@ export const Profile = () => {
 
                   {/* Address */}
                   <div>
-                    <label className="text-sm font-medium text-neutral-600">
+                    <label className="text-sm font-medium text-base-content/70">
                       Address
                     </label>
                     <input
                       type="text"
                       placeholder="Address"
-                      className="w-full mt-1 px-4 py-3 border border-neutral-300 rounded-xl
-                  bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-black transition"
+                      className="w-full mt-1 px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-xl
+                  bg-base-200 text-base-content focus:outline-none focus:ring-2 focus:ring-primary transition"
                       {...register("address", { required: "Must enter Address" })}
                     />
                     {errors.address && (
@@ -208,8 +208,8 @@ export const Profile = () => {
                   <div className="flex justify-center pt-4">
                     <button
                       type="submit"
-                      className="w-52 py-3 bg-white text-yellow-500 border border-yellow-500 rounded-xl
-                      font-semibold hover:bg-yellow-500 hover:text-white transition hover:cursor-pointer"
+                      className="w-52 py-3 bg-primary text-primary-content border border-primary rounded-xl
+                      font-semibold hover:opacity-90 transition hover:cursor-pointer"
                     >
                       Update
                     </button>
@@ -222,60 +222,60 @@ export const Profile = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 border-b border-neutral-200 pb-8 md:pb-10">
 
-                  <div className="flex flex-col items-center bg-neutral-50 rounded-2xl p-6">
-                    <p className="text-sm uppercase tracking-widest text-neutral-500 mb-2">
+                  <div className="flex flex-col items-center bg-base-200 rounded-2xl p-6">
+                    <p className="text-sm uppercase tracking-widest text-base-content/50 mb-2">
                       Name
                     </p>
-                    <p className="text-2xl md:text-4xl font-semibold text-neutral-900">
+                    <p className="text-2xl md:text-4xl font-semibold text-base-content">
                       {profile.firstName}
                     </p>
                   </div>
 
-                  <div className="flex flex-col items-center bg-neutral-50 rounded-2xl p-6">
-                    <p className="text-sm uppercase tracking-widest text-neutral-500 mb-2">
+                  <div className="flex flex-col items-center bg-base-200 rounded-2xl p-6">
+                    <p className="text-sm uppercase tracking-widest text-base-content/50 mb-2">
                       Phone No
                     </p>
-                    <p className="text-2xl md:text-4xl font-semibold text-neutral-900">
+                    <p className="text-2xl md:text-4xl font-semibold text-base-content">
                       {profile.phone}
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-6 md:mt-8 bg-neutral-50 border border-neutral-200 rounded-2xl p-6">
-                  <p className="text-sm uppercase tracking-widest text-neutral-500 mb-2">
+                <div className="mt-6 md:mt-8 bg-base-200 border border-neutral-300 dark:border-neutral-700 rounded-2xl p-6">
+                  <p className="text-sm uppercase tracking-widest text-base-content/50 mb-2">
                     Address
                   </p>
-                  <p className="text-lg font-medium text-neutral-900 text-center md:text-left">
+                  <p className="text-lg font-medium text-base-content text-center md:text-left">
                     {profile.address}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
 
-                  <div className="border border-neutral-200 rounded-2xl p-6 hover:bg-neutral-50 transition shadow-sm">
-                    <p className="text-xl font-semibold">Favorite Items</p>
+                  <div className="border border-neutral-300 dark:border-neutral-700 rounded-2xl p-6 hover:bg-base-200 transition shadow-sm bg-base-100">
+                    <p className="text-xl font-semibold text-base-content">Favorite Items</p>
                   </div>
 
                   <Link to="/cart">
-                    <div className="border border-neutral-200 rounded-2xl p-6 hover:bg-neutral-50 transition shadow-sm">
-                      <p className="text-xl font-semibold">Cart Items</p>
+                    <div className="border border-neutral-300 dark:border-neutral-700 rounded-2xl p-6 hover:bg-base-200 transition shadow-sm bg-base-100">
+                      <p className="text-xl font-semibold text-base-content">Cart Items</p>
                     </div>
                   </Link>
 
-                  {profile.role == 'admin' ? 
-                  <Link to="/query">
-                  <div className="border border-neutral-200 rounded-2xl p-6 hover:bg-neutral-50 transition shadow-sm">
-                    <p className="text-xl font-semibold">Query</p>
-                  </div>
-                  </Link>
-                  :
-                  <Link to="/orderdetails">
-                  <div className="border border-neutral-200 rounded-2xl p-6 hover:bg-neutral-50 transition shadow-sm">
-                    <p className="text-xl font-semibold">Ordered Items</p>
-                  </div>
-                  </Link>
+                  {profile.role == 'admin' ?
+                    <Link to="/query">
+                      <div className="border border-neutral-300 dark:border-neutral-700 rounded-2xl p-6 hover:bg-base-200 transition shadow-sm bg-base-100">
+                        <p className="text-xl font-semibold text-base-content">Query</p>
+                      </div>
+                    </Link>
+                    :
+                    <Link to="/orderdetails">
+                      <div className="border border-neutral-300 dark:border-neutral-700 rounded-2xl p-6 hover:bg-base-200 transition shadow-sm bg-base-100">
+                        <p className="text-xl font-semibold text-base-content">Ordered Items</p>
+                      </div>
+                    </Link>
                   }
-                  
+
 
                   {profile.role == 'admin' && (
                     <div>

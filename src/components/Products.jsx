@@ -4,7 +4,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { UserInfoContext } from "../context/UserInfoContext";
 
 export const Products = () => {
-    const {userInfo} = useContext(UserInfoContext)
+    const { userInfo } = useContext(UserInfoContext)
     const [allProducts, setAllProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -55,7 +55,7 @@ export const Products = () => {
         setSearchParams(value ? { q: value } : {});
     };
 
-    const handleDelete = (id) =>{
+    const handleDelete = (id) => {
         const updateAll = allProducts.filter(product => product.id != id);
         setAllProducts(updateAll);
 
@@ -70,18 +70,18 @@ export const Products = () => {
     return (
         <div
             id="products"
-            className="w-full px-5 md:px-20 lg:px-40 my-10 border border-neutral-300 rounded-2xl"
+            className="w-full px-5 md:px-20 lg:px-40 my-10 border border-neutral-300 dark:border-neutral-700 rounded-2xl"
         >
             {/* Header */}
             <div className="flex justify-center">
-                <div className="my-6 p-6 border border-neutral-300 rounded-3xl w-full max-w-2xl bg-white/70 backdrop-blur">
-                    <h1 className="text-center text-5xl font-bold tracking-tight text-neutral-900 mb-6">
+                <div className="my-6 p-6 border border-neutral-300 dark:border-neutral-700 rounded-3xl w-full max-w-2xl bg-base-100/70 backdrop-blur">
+                    <h1 className="text-center text-5xl font-bold tracking-tight text-base-content mb-6">
                         Our Products
                     </h1>
 
                     <input
-                        className="w-full h-12 px-4 border border-neutral-400 rounded-2xl
-            bg-white focus:outline-none focus:ring-2 focus:ring-black
+                        className="w-full h-12 px-4 border border-neutral-400 dark:border-neutral-600 rounded-2xl
+            bg-base-100 text-base-content focus:outline-none focus:ring-2 focus:ring-primary
             placeholder-neutral-500"
                         placeholder="Search for products..."
                         value={searchText}
@@ -100,8 +100,8 @@ export const Products = () => {
                     <div key={item.id} className="group">
                         <div
                             className="
-                bg-white
-                border border-neutral-300
+                bg-base-100
+                border border-neutral-300 dark:border-neutral-700
                 rounded-3xl
                 shadow-[0_4px_20px_rgba(0,0,0,0.05)]
                 hover:shadow-[0_6px_30px_rgba(0,0,0,0.12)]
@@ -112,7 +112,7 @@ export const Products = () => {
               "
                         >
                             {/* Title */}
-                            <h2 className="text-center text-xl font-semibold tracking-wide text-neutral-900">
+                            <h2 className="text-center text-xl font-semibold tracking-wide text-base-content">
                                 {item.title}
                             </h2>
 
@@ -129,15 +129,15 @@ export const Products = () => {
 
                             {/* Price & Button */}
                             <div className="flex justify-between items-center">
-                                <p className="text-xl font-bold text-neutral-900">
+                                <p className="text-xl font-bold text-base-content">
                                     ${item.price}
                                 </p>
 
-                                { userInfo.u_role == 'admin' &&
+                                {userInfo.u_role == 'admin' &&
 
-                                <button
-                                    onClick={() => handleDelete(item.id)}
-                                    className="
+                                    <button
+                                        onClick={() => handleDelete(item.id)}
+                                        className="
                     px-5 py-2
                     border border-red-700
                     rounded-xl
@@ -147,9 +147,9 @@ export const Products = () => {
                     hover:bg-red-700 hover:text-white hover:cursor-pointer
                     transition-all duration-300
                   "
-                                >
-                                    Delete
-                                </button>
+                                    >
+                                        Delete
+                                    </button>
 
                                 }
 
@@ -157,12 +157,12 @@ export const Products = () => {
                                     to={`/product/${item.id}`}
                                     className="
                     px-5 py-2
-                    border border-neutral-900
+                    border border-current
                     rounded-xl
-                    text-neutral-900
+                    text-base-content
                     font-medium
                     tracking-wide
-                    hover:bg-neutral-900 hover:text-white
+                    hover:bg-base-content hover:text-base-100
                     transition-all duration-300
                   "
                                 >

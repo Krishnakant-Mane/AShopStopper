@@ -59,7 +59,7 @@ export const About = () => {
         <div className="w-full my-5 px-4 sm:p-10 md:p-20">
           <div className="flex w-full justify-end">
             <div className="w-full md:w-1/2">
-              <p className="text-xl sm:text-3xl md:text-5xl">
+              <p className="text-xl sm:text-3xl md:text-5xl text-base-content/90">
                 Discover a refined way of living with <b>Ashopstopper</b>. Rooted in thoughtful design and modern aesthetics, our collections celebrate crafted simplicity and timeless style.
               </p>
             </div>
@@ -67,23 +67,23 @@ export const About = () => {
         </div>
 
         <div className="flex flex-col md:flex-row w-full my-5 px-4 md:p-20 gap-10 md:justify-between">
-          <div className="w-full md:w-1/3 text-3xl md:text-5xl">
+          <div className="w-full md:w-1/3 text-3xl md:text-5xl text-base-content">
             INSIDE ASHOPSTOPPER
           </div>
 
           <div className="w-full md:w-1/2">
-            <div className="border-t-2 p-5 flex flex-col sm:flex-row gap-5 sm:gap-10">
+            <div className="border-t-2 border-base-content/20 p-5 flex flex-col sm:flex-row gap-5 sm:gap-10 text-base-content/70">
               <div>01</div>
-              <div className="text-xl sm:text-3xl font-bold">Our Vision</div>
+              <div className="text-xl sm:text-3xl font-bold text-base-content">Our Vision</div>
               <div>
                 We see design as more than aesthetics—it’s a way of living with intention,
                 comfort, and connection.
               </div>
             </div>
 
-            <div className="border-t-2 p-5 flex flex-col sm:flex-row gap-5 sm:gap-10">
+            <div className="border-t-2 border-base-content/20 p-5 flex flex-col sm:flex-row gap-5 sm:gap-10 text-base-content/80">
               <div>02</div>
-              <div className="text-xl sm:text-3xl font-bold">Our Mission</div>
+              <div className="text-xl sm:text-3xl font-bold text-base-content">Our Mission</div>
               <div>
                 Our mission is to craft thoughtfully designed furniture that blends
                 Italian precision with human-centered values.
@@ -105,7 +105,7 @@ export const About = () => {
             </div>
 
             <div className="w-full md:w-1/2">
-              <div className="max-w-md">
+              <div className="max-w-md text-base-content/80">
                 Rooted in Italian craftsmanship, our values lie in thoughtful design that connects people to spaces-creating harmony. comfort, and a quiet sense of belonging.
               </div>
             </div>
@@ -125,17 +125,17 @@ export const About = () => {
                 const isOpen = openIndex === index;
 
                 return (
-                  <div key={index} className="py-2 border-t-2">
+                  <div key={index} className="py-2 border-t-2 border-base-content/20">
                     <button
                       onClick={() => toggleAccordion(index)}
-                      className="flex justify-between items-center w-full px-4 py-2 font-medium"
+                      className="flex justify-between items-center w-full px-4 py-2 font-medium text-base-content"
                     >
                       <span>{item.title}</span>
                       <span className="text-xl">{isOpen ? "−" : "+"}</span>
                     </button>
 
                     <div
-                      className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600
+                      className={`grid overflow-hidden transition-all duration-300 ease-in-out text-base-content/70
                   ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
                     >
                       <div className="overflow-hidden px-4 pb-2">
@@ -149,18 +149,18 @@ export const About = () => {
           </div>
 
           <div className="flex flex-col md:flex-row w-full my-10 gap-10">
-            <div className="w-full md:w-1/2 text-2xl md:text-5xl">
+            <div className="w-full md:w-1/2 text-2xl md:text-5xl text-base-content">
               DEVELOPERS BEHIND THE VISION
             </div>
 
-            <div className="w-full md:w-1/2 text-lg md:text-2xl">
+            <div className="w-full md:w-1/2 text-lg md:text-2xl text-base-content/80">
               Each member of our team brings a unique perspective, bound by a shared passion for thoughtful design and timeless quality. Together, we shape spaces that feel personal, purposeful, and beautifully made.
             </div>
           </div>
 
           <div className="flex flex-col md:flex-row w-full my-5">
             <div className="w-full md:w-1/2"></div>
-            <div className="w-full md:w-1/2 max-w-md">
+            <div className="w-full md:w-1/2 max-w-md text-base-content/70">
               Founded in Italy, Lapalma grew from the belief that true beauty lies in simplicity—shaped with precision and purpose. Every design reflects a commitment to essential forms.
             </div>
           </div>
